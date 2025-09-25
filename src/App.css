@@ -1,0 +1,116 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #2c3e50, #3498db);
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px 10px;
+  color: #fff;
+}
+
+.meme-form {
+  background-color: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  padding: 25px;
+  border-radius: 16px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  max-width: 600px;
+  width: 100%;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.meme-form input {
+  padding: 12px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #333;
+  outline: none;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.meme-form input::placeholder {
+  color: #999;
+}
+
+.meme-form button {
+  padding: 12px;
+  background-color: #ff5e57;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.meme-form button:hover {
+  background-color: #ff2e1f;
+}
+
+.meme {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.meme img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Meme text styling */
+.top,
+.bottom {
+  position: absolute;
+  width: 100%;
+  padding: 10px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 900;
+  color: white;
+  text-shadow: 2px 2px 10px black;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+  user-select: none;
+}
+
+.top {
+  top: 10px;
+}
+
+.bottom {
+  bottom: 10px;
+}
+
+/* Responsive text size for smaller devices */
+@media screen and (max-width: 500px) {
+  .top,
+  .bottom {
+    font-size: 1.2rem;
+    padding: 6px;
+  }
+
+  .meme-form {
+    padding: 20px;
+  }
+}
